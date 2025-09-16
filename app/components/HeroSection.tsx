@@ -82,9 +82,12 @@ export default function HeroSection() {
 					>
 						<div className="mt-4 bg-white/5 border border-white/10 rounded-xl p-5">
 							<p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                                I’m a <strong>4th-year Computer Science major @ Georgia Tech</strong> concentrating in <strong>Information Internetworks and People</strong>. 
-								I’ve worked at <strong>Meta</strong>, <strong>Amazon</strong>, and <strong>Waystar</strong>, building tools that <strong>improved workflows</strong>, <strong>cut costs</strong>, and <strong>enhanced user experiences</strong>. 
-								I like turning ideas into real products—designing <strong>gesture-controlled music interfaces</strong> or shipping <strong>full-stack web apps</strong>. My strengths include <strong>cloud platforms</strong>, <strong>modern web frameworks</strong>, and <strong>computer vision</strong>. 
+                                Hi! I’m a <strong>4th-year Computer Science major @ Georgia Tech</strong> concentrating in <strong>Information Internetworks and People</strong>. <br />
+								<br />
+								I’ve interned at <strong>Meta</strong>, <strong>Amazon</strong>, and <strong>Waystar</strong>, building tools that <strong>automate workflows</strong>, <strong>cut costs</strong>, and <strong>enhanced user experiences</strong>. 
+								I like turning ideas into real products—designing <strong>gesture-controlled music interfaces</strong> or shipping <strong>full-stack web apps</strong>. <br />
+								<br />
+								My strengths include <strong>cloud platforms</strong>, <strong>modern web frameworks</strong>, and <strong>computer vision</strong>. 
 								I value <strong>collaboration</strong>, <strong>learning from others</strong>, and making an impact as a <strong>software engineer</strong> focused on <strong>technical impact</strong> and <strong>human-centered design</strong>.
                             </p>
 						</div>

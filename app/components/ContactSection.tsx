@@ -4,8 +4,26 @@ import { motion } from 'framer-motion';
 
 export default function ContactSection() {
 	return (
-		<section className="py-12 md:py-20 px-4">
+		<section className="py-12 md:py-20 bg-gradient-to-b from-purple-900/20 via-purple-900/10 to-transparent">
 			<div className="max-w-3xl mx-auto text-center">
+				<motion.div
+					initial={{ opacity: 0, y: 10 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6 }}
+					className="mb-6"
+				>
+					<motion.img
+						src="/portfolio-pic.jpg"
+						alt="Ayane Yokoya"
+						className="w-24 h-24 md:w-40 md:h-40 rounded-full object-cover mx-auto"
+						initial={{ opacity: 0, y: 8 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.6, delay: 0.1 }}
+					/>
+				</motion.div>
+
 				<motion.h2
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}

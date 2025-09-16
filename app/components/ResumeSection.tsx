@@ -18,7 +18,7 @@ const itemVariants = {
 
 export default function ResumeSection() {
   return (
-    <section id="resume" className="resume-section py-16 container mx-auto px-4">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-black to-purple-900/20">
       <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -55,8 +55,6 @@ export default function ResumeSection() {
           Download
         </motion.a>
       </motion.div>
-
-      {/* Inline preview (falls back gracefully if the browser blocks embed) */}
       <motion.div
         variants={itemVariants}
         initial="hidden"
@@ -67,7 +65,7 @@ export default function ResumeSection() {
         <iframe
           src="/resume.pdf#view=FitH"
           title="Resume PDF Preview"
-          className="w-full h-[70vh]"
+          className="w-full h-[100vh]"
         />
       </motion.div>
     </section>
