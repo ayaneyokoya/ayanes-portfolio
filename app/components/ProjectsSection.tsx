@@ -5,23 +5,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const projects = [
-  {
+{
     id: 1,
+    title: 'LockIn',
+    description:
+      'A productivity task list app with geo-location tracking for reminders and a notification system to remind users of their tasks. Uses Firebase Authentication for user log-ins.',
+    image: '/lockin.png',
+    demoUrl: 'https://github.com/user-attachments/assets/a208e28a-e734-47d6-ac4b-32d58ed8ca14',
+    githubUrl: 'https://github.com/ayaneyokoya/lock-in',
+  },
+  {
+    id: 2,
     title: 'SonoGest',
     description:
       'Gesture-controlled performance tool that lets musicians manipulate Ableton Live in real time using MediaPipe Hands + OpenCV, routed over AbletonOSC. I designed the gesture set, mapped effects/transport controls, and tuned the pipeline for reliable, low‑latency interaction.',
     image: '/ableton.png',
     demoUrl: 'https://drive.google.com/file/d/11pH_dHGolmcbrymaFBVNDPVZ2dqaryla/view?usp=sharing',
     githubUrl: 'https://github.com/ayaneyokoya/SonoGest',
-  },
-  {
-    id: 2,
-    title: 'AI Summarizer',
-    description:
-      'Lightweight web app that turns long‑form articles into concise summaries powered by OpenAI. Includes URL ingestion, robust error handling, and a clean UI for quick copy/share—deployed on Netlify for fast demos.',
-    image: '/sumz.png',
-    demoUrl: 'https://649f557f50d4bf483b7df634--prismatic-jelly-a68665.netlify.app/',
-    githubUrl: 'https://github.com/ayaneyokoya/ai-summarizer',
   },
 ];
 
