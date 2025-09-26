@@ -34,7 +34,6 @@ export default function HeroSection() {
 				>
 					Software Engineer | B.S. in Computer Science @ Georgia Tech
 				</motion.p>
-				{/* 75–100 word biography (collapsible) */}
 				<motion.div
 					initial={{ y: 30, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}

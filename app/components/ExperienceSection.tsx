@@ -64,7 +64,6 @@ export default function ExperienceSection() {
 							key={exp.company + exp.dates}
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							// subtle grow on hover and focus for accessibility
 							whileHover={{ scale: 1.02 }}
 							whileFocus={{ scale: 1.02 }}
 							viewport={{ once: true }}
@@ -94,8 +93,6 @@ export default function ExperienceSection() {
 									</li>
 								))}
 							</ul>
-
-							{/* tags like SkillsSection */}
 							<div className="mt-4 flex flex-wrap gap-2">
 								{exp.tags.map((tag, tIdx) => (
 									<motion.span
