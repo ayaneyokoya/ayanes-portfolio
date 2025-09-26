@@ -9,9 +9,9 @@ const experiences = [
 		location: 'Seattle, WA',
 		dates: 'May 2025 – Aug 2025',
 		bullets: [
-			'Designed and shipped a 1‑click campaign conversion feature (Shopify Meta App) that yielded ~6% lower cost per conversion in pilot tests.',
-			'Improved advertiser workflows with GraphQL mutations and optimized Mid‑Flight Recommendation pipelines for campaign trait conversion.',
-			'Integrated SMA with Ads Manager to resolve cross‑surface commerce ads issues across teams.',
+			'Built 1-click campaign conversion feature in Shopify Meta App, lowering cost per conversion by 6% in pilot tests',
+			'Optimized advertiser workflows via GraphQL mutations & Mid-Flight Recommendation pipelines.',
+			'Resolved cross-surface commerce ads issues by aligning SMA with Ads Manager and partner tools.',
 		],
 		tags: ['PHP', 'GraphQL', 'ReactJS', 'Jest', 'A/B testing', 'Cross-team Collaboration'],
 	},
@@ -69,23 +69,23 @@ export default function ExperienceSection() {
 							className="bg-white/5 rounded-xl p-5 md:p-6 border border-white/8"
 						>
 							<div className="flex items-start justify-between gap-4">
-								<div>
-									<h3 className="text-lg font-semibold">
-										{exp.role}{' '}
-										<span className="text-gray-400">— {exp.company}</span>
-									</h3>
-									<p className="text-sm text-gray-400">
-										{exp.location} ·{' '}
-										<span className="font-mono text-xs">
-											{exp.dates}
-										</span>
-									</p>
-								</div>
-							</div>
+                                <div>
+                                    <h3 className="text-xl md:text-2xl font-semibold">
+                                        {exp.role}{' '}
+                                        <span className="text-gray-400">— {exp.company}</span>
+                                    </h3>
+                                    <p className="text-sm md:text-base text-gray-400">
+                                        {exp.location} ·{' '}
+                                        <span className="font-mono text-sm md:text-base">
+                                            {exp.dates}
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
 
 							<ul className="mt-3 list-disc list-inside text-gray-300 space-y-1">
 								{exp.bullets.map((b, idx) => (
-									<li key={idx} className="text-sm">
+									<li key={idx} className="text-base">
 										{b}
 									</li>
 								))}
@@ -100,7 +100,7 @@ export default function ExperienceSection() {
 										whileInView={{ opacity: 1, scale: 1 }}
 										viewport={{ once: true }}
 										transition={{ duration: 0.35, delay: 0.06 * tIdx + i * 0.04 }}
-										className="text-xs px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+										className="text-sm px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
 									>
 										{tag}
 									</motion.span>
