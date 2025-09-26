@@ -64,9 +64,13 @@ export default function ExperienceSection() {
 							key={exp.company + exp.dates}
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
+							// subtle grow on hover and focus for accessibility
+							whileHover={{ scale: 1.02 }}
+							whileFocus={{ scale: 1.02 }}
 							viewport={{ once: true }}
 							transition={{ duration: 0.6, delay: i * 0.1 }}
 							className="bg-white/5 rounded-xl p-5 md:p-6 border border-white/8"
+							tabIndex={0}
 						>
 							<div className="flex items-start justify-between gap-4">
                                 <div>
