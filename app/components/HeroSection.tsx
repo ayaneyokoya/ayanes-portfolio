@@ -146,8 +146,8 @@ export default function HeroSection() {
 							<p className="text-base md:text-lg text-gray-300 leading-relaxed">
                                 Hi! I’m a <strong>4th-year Computer Science major @ Georgia Tech</strong> concentrating in <strong>Information Internetworks and People</strong>. <br />
 								<br />
-								I’ve interned at <strong>Meta</strong>, <strong>Amazon</strong>, and <strong>Waystar</strong>, building tools that <strong>automate workflows</strong>, <strong>cut costs</strong>, and <strong>enhanced user experiences</strong>. 
-								I like turning ideas into real products—designing <strong>gesture-controlled music interfaces</strong> or shipping <strong>full-stack web apps</strong>. <br />
+								I’ve interned at <strong>Meta</strong>, <strong>Amazon</strong>, and <strong>Waystar</strong>, building tools that <strong>automate workflows</strong>, <strong>cut costs</strong>, and <strong>enhance user experiences</strong>. 
+								I like turning ideas into real products—from <strong>gesture-controlled music interfaces</strong> or shipping <strong>full-stack web & mobile apps</strong>. <br />
 								<br />
 								My strengths include <strong>cloud platforms</strong>, <strong>modern web frameworks</strong>, and <strong>computer vision</strong>. 
 								I value <strong>collaboration</strong>, <strong>learning from others</strong>, and making an impact as a <strong>software engineer</strong> focused on <strong>technical impact</strong> and <strong>human-centered design</strong>.
