@@ -1,10 +1,36 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function HeroSection() {
 	const [open, setOpen] = useState(false);
+	const [showQuote, setShowQuote] = useState(false);
+	const mouseX = useMotionValue(0);
+	const mouseY = useMotionValue(0);
+
+	const rotateX = useSpring(useTransform(mouseY, [-300, 300], [10, -10]), {
+		stiffness: 150,
+		damping: 30
+	});
+	const rotateY = useSpring(useTransform(mouseX, [-300, 300], [-10, 10]), {
+		stiffness: 150,
+		damping: 30
+	});
+
+	useEffect(() => {
+		const handleMouseMove = (e: MouseEvent) => {
+			const { clientX, clientY } = e;
+			const centerX = window.innerWidth / 2;
+			const centerY = window.innerHeight / 2;
+			mouseX.set(clientX - centerX);
+			mouseY.set(clientY - centerY);
+		};
+
+		window.addEventListener('mousemove', handleMouseMove);
+		return () => window.removeEventListener('mousemove', handleMouseMove);
+	}, [mouseX, mouseY]);
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -18,6 +44,43 @@ export default function HeroSection() {
 			</div>
 
 			<div className="relative z-10 text-center">
+				<motion.div
+					initial={{ y: 50, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					transition={{ duration: 0.8 }}
+					style={{
+						rotateX: rotateX,
+						rotateY: rotateY,
+						transformPerspective: 1000
+					}}
+					className="mb-6 will-change-transform relative flex flex-col items-center"
+				>
+					<AnimatePresence>
+						{showQuote && (
+							<motion.div
+								initial={{ opacity: 0, scale: 0.5, y: -20 }}
+								animate={{ opacity: 1, scale: 1, y: 0 }}
+								exit={{ opacity: 0, scale: 0.5, y: -20 }}
+								transition={{ type: "spring", duration: 0.4 }}
+								className="absolute -top-10 bg-white/10 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/20 text-white/90 whitespace-nowrap"
+							>
+								<div className="relative">
+									Hi! Welcome to my portfolio. I&apos;m glad you&apos;re here!
+									<div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-white/10" />
+								</div>
+							</motion.div>
+						)}
+					</AnimatePresence>
+					<Image
+						src="/avatar.png"
+						alt="Ayane Yokoya"
+						width={320}
+						height={320}
+						className="w-64 h-64 md:w-80 md:h-80 [filter:invert(1)_brightness(100)] cursor-pointer"
+						draggable="false"
+						onClick={() => setShowQuote(!showQuote)}
+					/>
+				</motion.div>
 				<motion.h1
 					initial={{ y: 50 }}
 					animate={{ y: 0 }}
